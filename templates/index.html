@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Upload</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<body>
+DHT22, TGS2602
+<form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
+    <input type=file name=upload>
+    <input type="submit" id="submit_button">
+</form>
+</body>
+<script>
+
+        $.ajax({
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                    "width": $(window).width()
+            }),
+            url: '/width',
+            dataType: 'json',
+            success: function(kk) {
+                console.log("success");
+            },
+            error: function(err) {
+                
+                console.log($(window).width());
+            }
+        });
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>DHT22 + TGS2602</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="static/js/show_curve.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+
+<style>
+.chartdiv {
+        width       : 100%;
+        height      : 700px;
+        font-size   : 12px;
+}           
+</style>
+<body>
+    <div id="my_amchart" style="height: 700px;"></div>
+</body>
+<script>
+    var qq = {{ backend_data | tojson | safe }};
+    //console.log(qq['data']) 
+</script>
+
+</html>
